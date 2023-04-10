@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { leaksData, fetchSampleLeaksByEmail } from "../clients/apiClient";
+import { leaksData, fetchSampleLeaksByEmail } from "../../clients/apiClient";
 
 
 export function EmailLeakChecker(): JSX.Element {
@@ -13,15 +13,16 @@ export function EmailLeakChecker(): JSX.Element {
 
     if (!leaks) return <p>Waiting for data</p>
 
-    const ourLeaks : JSX.Element[] = [];
+    const ourLeaks : JSX.Element[] = [<tr><td>Name</td><td>Title</td><td>Domain</td><td>Breach Date</td></tr>];
 
     leaks.forEach(element => {
         ourLeaks.push(
-            <p>{element.Name}, {element.Title}, {element.Domain}</p>
+            <tr><td>{element.Name}</td><td>{element.Title}</td><td>{element.Domain}</td><td>{element.BreachDate}</td></tr>
         )
     });
 
     return <div>
-        {ourLeaks}
-        </div>;
+        <h2>List of account leaks</h2>
+        <table>{ourLeaks}</table>
+    </div>;
 }
