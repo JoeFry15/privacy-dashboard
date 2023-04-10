@@ -1,4 +1,4 @@
-Privacy Dashboard
+#Privacy Dashboard
 
 This project is a privacy dashboard that allows users to:
 
@@ -6,29 +6,29 @@ This project is a privacy dashboard that allows users to:
     - Request their data to be deleted
     - Request access to their data
 
-Getting Started
+##Getting Started
 
 To get started with this project, you will need to clone this repository and install the dependencies.
 
-Prerequisites
+##Prerequisites
 
 This project requires Node.js and npm to be installed on your machine. You can download and install them from the Node.js website.
 
-Installing
+##Installing
 
 To install the dependencies for this project, run the following command:
 
-npm install
+**npm install**
 
-Running
+##Running
 
 To run the project, use the following command:
 
-npm start
+**npm start**
 
 This will start a development server on http://localhost:5173, where you can view the dashboard.
 
-Usage
+##Usage
 
 The dashboard allows users to:
 
