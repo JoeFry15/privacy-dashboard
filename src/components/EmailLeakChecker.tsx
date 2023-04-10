@@ -1,22 +1,13 @@
 import { useEffect, useState } from "react";
-import { fetchLeaksByEmail } from "../clients/apiClient";
+import { leaksData, fetchSampleLeaksByEmail } from "../clients/apiClient";
 
-type LeakData = {
-    [key: string]: {
-      events: {
-        title: string;
-        date: string;
-        notes: string;
-      }[];
-    };
-  };
 
 export function EmailLeakChecker(): JSX.Element {
 
-    const [leaks, setLeaks] = useState<LeakData | undefined>();
+    const [leaks, setLeaks] = useState<leaksData[] | undefined>();
     
     useEffect(() => {
-        fetchLeaksByEmail()
+        fetchSampleLeaksByEmail()
             .then(data => setLeaks(data));
     }, [])
 
@@ -24,13 +15,11 @@ export function EmailLeakChecker(): JSX.Element {
 
     const ourLeaks : JSX.Element[] = [];
 
-    leaks["england-and-wales"].events.forEach(element => {
+    leaks.forEach(element => {
         ourLeaks.push(
-            <p>{element.title}, {element.date}{element.notes ? ", " + element.notes : ""}</p>
+            <p>{element.Name}, {element.Title}, {element.Domain}</p>
         )
     });
-
-    console.log(ourLeaks);
 
     return <div>
         {ourLeaks}

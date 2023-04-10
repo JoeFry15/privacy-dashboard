@@ -1,16 +1,20 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+import { BrowserRouter, Route, Routes } from "react-router-dom"
 import './App.css'
 import { EmailLeakChecker } from './components/EmailLeakChecker'
+import { Home } from './components/Home'
 
 function App() {
 
   return (
-    <div className="App">
-      <h1>Your Privacy Dashboard</h1>
-      <EmailLeakChecker />
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/leaks" element={<EmailLeakChecker />} />
+        <Route path="/deletion" element={<></>} />
+        <Route path="/access" element={<></>} />
+      </Routes>
+    </BrowserRouter>
   )
 }
 
