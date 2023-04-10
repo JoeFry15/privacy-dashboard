@@ -22,7 +22,8 @@ export function EmailLeakChecker(): JSX.Element {
     });
 
     return <div>
-        <h2>List of account leaks</h2>
+        <h1>Account leaks</h1>
+        <h4>See a list of known leaks of your data</h4>
         <table>{ourLeaks}</table>
     </div>;
 }
