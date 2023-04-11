@@ -1,6 +1,16 @@
 
-.Home img {
-    width: 100px;
+.home {
+    margin: 0;
+}
+
+.home-image {
+    width: 150px;
     height: auto;
-    padding: 5%;
+    mix-blend-mode: multiply;
+}
+
+.home-links {
+    display: flex;
+    justify-content: space-between;
+    column-gap: 50px;
 }

@@ -5,6 +5,7 @@ import { EmailLeakChecker } from './components/Leaks/EmailLeakChecker'
 import { Home } from './components/Navigation/Home'
 import { Deletion } from './components/Deletion/Deletion'
 import { Access } from './components/Access/Access'
+import { Settings } from './components/Settings/Settings'
 
 function App() {
 
@@ -15,6 +16,7 @@ function App() {
         <Route path="/leaks" element={<EmailLeakChecker />} />
         <Route path="/deletion" element={<Deletion />} />
         <Route path="/access" element={<Access />} />
+        <Route path="/settings" element={<Settings />} />
       </Routes>
     </BrowserRouter>
   )
