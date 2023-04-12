@@ -3,7 +3,7 @@
 This project is a privacy dashboard that allows users to:
 
     - See known leaks of their data
-    - Request their data to be deleted
+    - Request deletion of their data
     - Request access to their data
 
 ## Getting Started
@@ -33,12 +33,11 @@ This will start a development server on http://localhost:5173, where you can vie
 The dashboard allows users to:
 
     - See known leaks of their data
-    - Request their data to be deleted
+    - Request deletion of their data
     - Request access to their data
 
-To see data leaks from your account, navigate to the "Leaks" page and enter your account information. The dashboard will display any known data leaks associated with your account.
+To see data leaks from your account, navigate to the "Leaks" page.
 
-To request your data to be deleted, navigate to the "Deletion" page and enter your account information. The dashboard will submit a request to the data controller to delete your data.
+To copy email templates requesting deletion of your data, navigate to the "Deletion" page.
 
-To request access to your data, navigate to the "Access" page and enter your account information. The dashboard will submit a request to the data controller to access your data.
-Contributing
+To copy email templates requesting access to your data, navigate to the "Access" page.
