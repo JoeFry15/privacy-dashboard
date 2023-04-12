@@ -1,17 +1,28 @@
+import { useState } from "react";
+import "./DeletionEmail.scss";
+import { FaClipboard } from "react-icons/fa";
+
 interface deletionEmailProps {
     account: string,
 }
 
 export function DeletionEmail({account} : deletionEmailProps): JSX.Element {
-
+    const [copySuccess, setCopySuccess] = useState(false);
+    
     const emails = ["test@test.com", "test2@test.com"]
     const phoneNumbers = ["0123456789"]
     const fullName = "Test McTest"
     const usernames = ["Test12"]
 
+    const copyToClipboard = () => {
+        const text = document.querySelector('.email-template')?.textContent;
+        navigator.clipboard.writeText(text || "");
+        setCopySuccess(true);
+    }
+
     return <div>
         <h3>Deletion Email for {account}:</h3>
-        <p>
+        <p className="email-template">
             To whom it may concern,<br></br>
             <br></br>
             In accordance with Article 17 of the European General Data Protection Regulation, please proceed to the erasure of my personal data without undue delay.
@@ -33,5 +44,9 @@ export function DeletionEmail({account} : deletionEmailProps): JSX.Element {
             Yours sincerely,<br></br>
             {fullName}
         </p>
+        <button onClick={copyToClipboard}>
+        <FaClipboard />
+        {copySuccess ? " Copied!" : " Copy to Clipboard"}
+      </button>
     </div>
 }
