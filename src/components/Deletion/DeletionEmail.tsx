@@ -20,12 +20,12 @@ export function DeletionEmail({account} : deletionEmailProps): JSX.Element {
         setCopySuccess(true);
     }
 
-    return <div>
+    return <div >
         <h3>Deletion Email for {account}:</h3>
-        <p className="email-template">
+        <div className="deletion-email-template" >
             To whom it may concern,<br></br>
             <br></br>
-            In accordance with Article 17 of the European General Data Protection Regulation, please proceed to the erasure of my personal data without undue delay.
+            In accordance with Article 17 of the European General Data Protection Regulation, please proceed to the erasure of my personal data without undue delay.<br></br>
             <br></br>
             - Account information, including my name, date of birth, e-mail address, billing/shipping address, phone number, and stored payment card data.<br></br>
             - User-generated content, which may include things such as photos, tracked activities, statistics, comments, or messages.<br></br>
@@ -35,7 +35,7 @@ export function DeletionEmail({account} : deletionEmailProps): JSX.Element {
             <br></br>
             Accounts may be associated with the following login credentials.<br></br>
             <br></br>
-            Email addresses: {emails.map(i => <p>{i}</p>)}
+            Email addresses: {emails.map(i => <p key={i}>{i}</p>)}
             Phone number: <p>{phoneNumbers}</p>
             User names: <p>{usernames}</p>
             <br></br>
@@ -43,7 +43,7 @@ export function DeletionEmail({account} : deletionEmailProps): JSX.Element {
             <br></br>
             Yours sincerely,<br></br>
             {fullName}
-        </p>
+        </div>
         <button onClick={copyToClipboard}>
         <FaClipboard />
         {copySuccess ? " Copied!" : " Copy to Clipboard"}
