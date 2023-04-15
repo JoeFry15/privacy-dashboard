@@ -41,3 +41,13 @@ To see data leaks from your account, navigate to the "Leaks" page.
 To copy email templates requesting deletion of your data, navigate to the "Deletion" page.
 
 To copy email templates requesting access to your data, navigate to the "Access" page.
+
+## Testing
+
+To run the Jest tests for this project, use the following command:
+
+**npm test**
+
+This will run all the test suites and show the results in your terminal. If any tests fail, you will see an error message with details about which tests failed and why.
+
+Make sure to run the tests before making any changes to the code to ensure that everything is working as expected.
