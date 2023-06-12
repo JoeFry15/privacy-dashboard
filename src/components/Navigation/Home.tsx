@@ -3,7 +3,7 @@ import './Home.scss'
 
 export function Home(): JSX.Element {
     return <>
-        <h1>Privacy Dashboard</h1>
+        <h1 data-testid="home-1">Privacy Dashboard</h1>
         <div className="home-links">
             <Link to="/leaks"><img className="home-image" src="Leak.png" /></Link>
             <Link to="/deletion"><img className="home-image" src="Delete.png" /></Link>
