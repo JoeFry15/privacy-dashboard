@@ -6,6 +6,7 @@ import { Home } from './components/Navigation/Home'
 import { Deletion } from './components/Deletion/Deletion'
 import { Access } from './components/Access/Access'
 import { Settings } from './components/Settings/Settings'
+import { ScamHelp } from './components/ScamHelp/ScamHelp'
 
 function App() {
 
@@ -16,6 +17,7 @@ function App() {
         <Route path="/leaks" element={<EmailLeakChecker />} />
         <Route path="/deletion" element={<Deletion />} />
         <Route path="/access" element={<Access />} />
+        <Route path="/scam-help" element={<ScamHelp />} />
         <Route path="/settings" element={<Settings />} />
       </Routes>
     </BrowserRouter>
